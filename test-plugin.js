@@ -79,3 +79,12 @@ Front.on('conversation', function (data) {
   console.log('OtherMessages', data.otherMessages);
   conversation = data.conversation;
 });
+function addTopic() {
+  Front.addTopic({
+      type: 'web',
+      name: 'Link example',
+      ext_link: 'https://cnx-service-portal.prod.cnxx.io/invoices'
+  }, function() {
+      console.log('done');
+  });
+}
